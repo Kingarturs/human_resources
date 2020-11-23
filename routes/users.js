@@ -5,7 +5,6 @@ const users = express.Router();
 const db = require('../config/database');
 
 users.post("/login", async (req, res, next) => {
-    console.log("Entered here!")
     const { email, password } = req.body;
     const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}';`
     
