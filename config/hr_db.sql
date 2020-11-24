@@ -3,9 +3,9 @@
 
 CREATE OR REPLACE TABLE users (
 	user_id int PRIMARY KEY AUTO_INCREMENT,
-	user_name varchar(30) NOT NULL,
-    user_mail varchar(60) NOT NULL,
-    user_password varchar(500) NOT NULL
+	name varchar(30) NOT NULL,
+    email varchar(60) NOT NULL UNIQUE,
+    password varchar(500) NOT NULL
 );
 
 CREATE OR REPLACE TABLE employees (
@@ -13,6 +13,6 @@ CREATE OR REPLACE TABLE employees (
     name varchar(50) NOT NULL,
     lastname varchar(50) NOT NULL,
     phone varchar(20) NOT NULL,
-    email varchar(50) NOT NULL,
+    email varchar(50) NOT NULL UNIQUE,
     address varchar(100) NOT NULL
 );
