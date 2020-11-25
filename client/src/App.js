@@ -11,11 +11,11 @@ function App() {
   return (
     <Router>
         <Switch>
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
           <Route exact path="/">
             <IndexPage />
+          </Route>
+          <Route exact path="/login">
+            <LoginPage />
           </Route>
         </Switch>
     </Router>
