@@ -14,30 +14,26 @@ function IndexPage() {
     });
 
     return (
-    <>
+        <>
+            <div>
+                <input type="search" placeholder="Search"></input> 
+                <button type="button"></button>
+            </div>
     
-    <div>
-        <input type="search" placeholder="Search"></input> 
-        <button type="button"><button>
-    </div>
-
-    <div>
-    <table class="table-auto"> 
-        <thread>
-            <tr>
-                <th>Name</th>
-                <th>Last Name</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-                <th>Adress</th>
-
-
-            </tr>
-        </thread>
-    </table> 
-    </div>
-
-    </>
+            <div>
+                <table class="table-auto"> 
+                    <thread>
+                        <tr>
+                            <th>Name</th>
+                            <th>Last Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Adress</th>
+                        </tr>
+                    </thread>
+                </table> 
+            </div>
+        </>
     )
 }
 
