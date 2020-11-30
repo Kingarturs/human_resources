@@ -11,17 +11,17 @@ function IndexPage() {
         if (!localStorage.getItem("token")) {
             history.push("/login");
         }
-    });
+    }, []);
 
     return (
         <>
             <div>
-                <input className="bg-light-blue-500" type="search" placeholder="Search"></input>
+                <input type="search" placeholder="Search"></input>
                 <button type="button"></button>
             </div>
     
             <div>
-            <table className="table-auto">
+            <table className="table-auto p-24">
                 <thead>
                     <tr>
                         <th className="w-1/2 px-4 py-2 text-light-blue-600">Name</th>
