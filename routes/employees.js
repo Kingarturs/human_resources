@@ -20,10 +20,9 @@ employees.post("/", async (req, res, next) => {
         }
     } catch (err) {
         console.log(err);
-        return res.status(200).json({ code: 500, message: "An error occurred, please try again later" });
+        return res.status(500).json({ code: 500, message: "An error occurred, please try again later" });
     }
-    
-    return res.status(200).json({ code: 400, message: "Please complete all required fields" });
+    return res.status(400).json({ code: 400, message: "Please complete all required fields" });
 })
 
 employees.delete("/:id([0-9]*)", async (req, res, next) => {
@@ -36,10 +35,10 @@ employees.delete("/:id([0-9]*)", async (req, res, next) => {
         if (rows.affectedRows > 0) {
             return res.status(200).json({ code: 200, message: "Employee succesfuly deleted" });
         } else {
-            return res.status(200).json({ code: 404, message: "Employee not found" });
+            return res.status(404).json({ code: 404, message: "Employee not found" });
         }
     } catch(err) {
-        return res.status(200).json({ code: 500, message: "An error occurred, please try again later" });
+        return res.status(500).json({ code: 500, message: "An error occurred, please try again later" });
     }
 })
 
@@ -50,7 +49,7 @@ employees.put("/:id([0-9]*)", async (req, res, next) => {
     if (name && lastname && phone && email && address) {
         rows = await db.query(`SELECT * FROM employees WHERE email = '${email}' AND employee_id != ${id}`);
         if (rows.length > 0) {
-            return res.status(200).json({ code: 400, message: "There's already an employee with that email" });
+            return res.status(400).json({ code: 400, message: "There's already an employee with that email" });
         }
 
         let query = `UPDATE employees SET name='${name}', lastname='${lastname}', phone='${phone}',`
@@ -61,15 +60,15 @@ employees.put("/:id([0-9]*)", async (req, res, next) => {
             if (rows.affectedRows == 1) {
                 return res.status(201).json({ code: 201, message: "Employee updated correctly" });
             } else {
-                return res.status(200).json({ code: 404, message: "Employee not found" });
+                return res.status(404).json({ code: 404, message: "Employee not found" });
             }
         } catch (err) {
             console.log(err);
-            return res.status(200).json({ code: 500, message: "An error occurred, please try again later" });
+            return res.status(500).json({ code: 500, message: "An error occurred, please try again later" });
         }
     }
 
-    return res.status(200).json({ code: 400, message: "Please complete all required fields" });
+    return res.status(400).json({ code: 400, message: "Please complete all required fields" });
 })
 
 employees.get("/", async (req, res, next) => {
@@ -77,7 +76,7 @@ employees.get("/", async (req, res, next) => {
         const result = await db.query("SELECT * FROM employees");
         return res.status(200).json({ code: 200, message: result });
     } catch (err) {
-        return res.status(200).json({ code: 500, message: "An error occurred, please try again later" });
+        return res.status(500).json({ code: 500, message: "An error occurred, please try again later" });
     }
 })
 
@@ -90,10 +89,10 @@ employees.get("/:id([0-9]*)", async (req, res, next) => {
         if (rows.length > 0) {
             return res.status(200).json({ code: 200, message: rows });
         } else {
-            return res.status(200).json({ code: 404, message: "Employee not found" });
+            return res.status(404).json({ code: 404, message: "Employee not found" });
         }
     } catch (err) {
-        return res.status(200).json({ code: 500, message: "An error occurred, please try again later" });
+        return res.status(500).json({ code: 500, message: "An error occurred, please try again later" });
     }
 })
 
@@ -107,11 +106,11 @@ employees.get("/:name([A-Za-z]*)", async (req, res, next) => {
         if (rows.length > 0) {
             return res.status(200).json({ code: 200, message: rows });
         } else {
-            return res.status(200).json({ code: 404, message: "Employee not found" });
+            return res.status(404).json({ code: 404, message: "Employee not found" });
         }
 
     } catch (err) {
-        return res.status(200).json({ code: 500, message: "An error occurred, please try again later" });
+        return res.status(500).json({ code: 500, message: "An error occurred, please try again later" });
     }
 })
 

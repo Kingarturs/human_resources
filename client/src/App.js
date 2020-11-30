@@ -6,17 +6,15 @@ import {
 } from "react-router-dom";
 import LoginPage from './screens/LoginPage';
 import IndexPage from './screens/IndexPage';
+import NewEmployee from './screens/NewEmployee';
 
 function App() {
   return (
     <Router>
         <Switch>
-          <Route exact path="/">
-            <IndexPage />
-          </Route>
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
+          <Route exact path="/" component={ IndexPage } />
+          <Route exact path="/login" component={ LoginPage } />
+          <Route exact path="/newEmployee" component={ NewEmployee } />
         </Switch>
     </Router>
   );
