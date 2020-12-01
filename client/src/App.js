@@ -9,6 +9,7 @@ import IndexPage from './screens/IndexPage';
 import NewEmployee from './screens/NewEmployee';
 import SearchEmployee from './screens/SearchEmployee';
 import ModifyEmployee from './screens/ModifyEmployee';
+import RemoveEmployee from './screens/RemoveEmployee';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/newEmployee" component={ NewEmployee } />
           <Route exact path="/search/:id" component={ SearchEmployee } />
           <Route exact path="/edit/:id" component={ ModifyEmployee } />
+          <Route exact path="/remove/:id" component={ RemoveEmployee } />
         </Switch>
     </Router>
   );

@@ -6,8 +6,6 @@ import axios from 'axios';
 import SearchBar from '../components/SearchBar';
 import Table from '../components/Table';
 
-import './IndexPage.css'
-
 
 function IndexPage() {
     const [results, setResults] = useState([])
