@@ -13,7 +13,7 @@ import RemoveEmployee from './screens/RemoveEmployee';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/human_resources">
         <Switch>
           <Route exact path="/" component={ IndexPage } />
           <Route exact path="/login" component={ LoginPage } />

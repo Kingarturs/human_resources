@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/Kingarturs/human_resources/issues"
   },
-  "homepage": "https://github.com/Kingarturs/human_resources#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
