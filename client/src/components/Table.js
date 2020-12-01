@@ -29,8 +29,8 @@ export default function Table(props) {
 								<td className="border border-blue-500 px-4 py-2 text-blue-600 font-medium">{phone}</td>
 								<td className="border border-blue-500 px-4 py-2 text-blue-600 font-medium">{email}</td>
 								<td className="border border-blue-500 px-4 py-2 text-blue-600 font-medium">{address}</td>
-								<td className="border border-blue-500 px-4 py-2 text-blue-600 font-medium text-center"><a href={`/edit/${id}`}><i className="fas fa-user-edit"></i></a></td>
-								<td className="border border-blue-500 px-4 py-2 text-blue-600 font-medium text-center"><a href={`/remove/${id}`}><i className="fas fa-minus-circle"></i></a></td>
+								<td className="border border-blue-500 px-4 py-2 text-blue-600 font-medium text-center"><a href={`/edit/${id}`}><i class="fas fa-user-edit"></i></a></td>
+								<td className="border border-blue-500 px-4 py-2 text-blue-600 font-medium text-center"><a href={`/remove/${id}`}><i class="fas fa-minus-circle"></i></a></td>
 							</tr>
 						)
 					})
