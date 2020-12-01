@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
-import { useHistory } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import SearchBar from '../components/SearchBar';
@@ -31,19 +30,23 @@ function IndexPage() {
         getEmployees()
     }, []);
 
+    function createEmployee() {
+        history.push("/newEmployee");
+    }
+
     return (
         <>
             <SearchBar />
             <div className="p-24">
             <Table employees={employees} /> 
-            <a href="/newEmployee">
+            <span onClick={createEmployee}>
                 <button className="w-16 h-16 absolute bottom-12 right-12 transform transition hover:scale-90 hover:shadow-lg focus:outline-none rounded-full bg-blue-600 shadow-xl text-white">
                     <i className="fas fa-plus"></i>
                 </button>
-            </a>
+            </span>
             </div>
         </>
     )
 }
 
-export default IndexPage;
+export default withRouter(IndexPage);

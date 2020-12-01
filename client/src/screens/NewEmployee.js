@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { useHistory } from "react-router-dom";
+import { useHistory, withRouter } from "react-router-dom";
 import axios from "axios";
 
-export default function NewEmployee() {
+function NewEmployee() {
 	const [userData, setUserData] = useState({
 		name: "",
 		lastname: "",
@@ -116,3 +116,5 @@ export default function NewEmployee() {
 		</div>
 	);
 }
+
+export default withRouter(NewEmployee);

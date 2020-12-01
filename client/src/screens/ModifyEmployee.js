@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import Table from '../components/Table';
 
-export default function ModifyEmployee() {
+function ModifyEmployee() {
 	const { id: idParams } =  useParams();
 
 	const [userData, setUserData] = useState({
@@ -146,3 +146,5 @@ export default function ModifyEmployee() {
 		</div>
 	)
 }
+
+export default withRouter(ModifyEmployee);

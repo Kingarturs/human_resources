@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import SearchBar from '../components/SearchBar';
@@ -32,17 +32,21 @@ function IndexPage() {
         getResults()
     });
 
+    function returnHome() {
+        history.push("/");
+    }
+
     return (
         <>
 			<SearchBar />
             <div className="p-24">
 				<Table employees={results} /> 
 				<div className="flex items-center justify-content w-full mt-5">
-					<a href="/" className="text-center w-full text-blue-600">Display all employees</a>
+					<span onClick={returnHome} className="text-center w-full text-blue-600">Display all employees</span>
 				</div>
             </div>
         </>
     )
 }
 
-export default IndexPage;
+export default withRouter(IndexPage);
