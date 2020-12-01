@@ -37,12 +37,11 @@ function IndexPage() {
     return (
         <>
 			<SearchBar />
-    
             <div className="p-24">
-			<Table employees={results} /> 
-			<div className="flex items-center justify-content w-full mt-5">
-				<a href="/" className="text-center w-full text-blue-600">Display all employees</a>
-			</div>
+				<Table employees={results} /> 
+				<div className="flex items-center justify-content w-full mt-5">
+					<a href="/" className="text-center w-full text-blue-600">Display all employees</a>
+				</div>
             </div>
         </>
     )
