@@ -5,7 +5,8 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <title>Human resources - Express workshop</title>
+      <App />
+    </React.StrictMode>,
   document.getElementById('root')
 );
