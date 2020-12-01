@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { useHistory, useParams, withRouter } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import SearchBar from '../components/SearchBar';
@@ -49,4 +49,4 @@ function IndexPage() {
     )
 }
 
-export default withRouter(IndexPage);
+export default IndexPage;

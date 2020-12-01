@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import axios from 'axios';
-import { useHistory, useParams, withRouter } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 function RemoveEmployee() {
 	const { id } = useParams();
@@ -34,4 +34,4 @@ function RemoveEmployee() {
 	)
 }
 
-export default withRouter(RemoveEmployee);
+export default RemoveEmployee;

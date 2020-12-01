@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import { useParams, useHistory, withRouter } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
-
-import Table from '../components/Table';
 
 function ModifyEmployee() {
 	const { id: idParams } =  useParams();
@@ -147,4 +145,4 @@ function ModifyEmployee() {
 	)
 }
 
-export default withRouter(ModifyEmployee);
+export default ModifyEmployee;

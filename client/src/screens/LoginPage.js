@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react'
-import { useHistory, withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import './LoginPage.css'
 
 const axios = require('axios');
@@ -44,4 +44,4 @@ function LoginPage() {
     )
 }
 
-export default withRouter(LoginPage);
+export default LoginPage;
