@@ -34,6 +34,7 @@ export default function NewEmployee() {
 		<div className="p-24 flex items-center justify-center">
 			<div className="w-1/2">
 				<div className="bg-blue-200 rounded-2xl p-12 shadow-xl flex flex-col items-center">
+					<h1 className="text-4xl mb-10 text-blue-600 font-bold">Agregar Nuevo Empleado</h1>
 					<input
 						placeholder="Name"
 						type="text"

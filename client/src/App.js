@@ -7,6 +7,7 @@ import {
 import LoginPage from './screens/LoginPage';
 import IndexPage from './screens/IndexPage';
 import NewEmployee from './screens/NewEmployee';
+import SearchEmployee from './screens/SearchEmployee';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" component={ IndexPage } />
           <Route exact path="/login" component={ LoginPage } />
           <Route exact path="/newEmployee" component={ NewEmployee } />
+          <Route exact path="/search/:name" component={ SearchEmployee } />
         </Switch>
     </Router>
   );
