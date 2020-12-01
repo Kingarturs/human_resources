@@ -5,8 +5,10 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <title>Human resources - Express workshop</title>
-      <App />
-    </React.StrictMode>,
+    <head>
+      <title>Human resources - Express workshop</title>
+    </head>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
