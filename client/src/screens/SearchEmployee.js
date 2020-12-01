@@ -19,7 +19,7 @@ function IndexPage() {
         
         const getResults = async () => {
             await axios({
-                url: `http://localhost:5000/employees/${name}`, 
+                url: `https://humanresources.cleverapps.io/employees/${name}`, 
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`

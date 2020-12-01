@@ -18,7 +18,7 @@ function LoginPage() {
 
     const login = () => {
         axios({
-            url: "http://localhost:5000/login", 
+            url: "https://humanresources.cleverapps.io/login", 
             method: 'POST',
             data: {
                 email: email,

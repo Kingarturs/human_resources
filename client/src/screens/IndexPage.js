@@ -18,7 +18,7 @@ function IndexPage() {
         
         const getEmployees = async () => {
             await axios({
-                url: "http://localhost:5000/employees", 
+                url: "https://humanresources.cleverapps.io/employees", 
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -27,13 +27,6 @@ function IndexPage() {
                 const response = res.data.message
                 setEmployees(response)
             })
-            // await axios.("http://localhost:5000/employees", {
-            //     headers: {
-            //         "Authorization": `Bearer ${localStorage.getItem("token")}`
-            //     }
-            // }).then(response => {
-            //     console.log(response.json)
-            // })
         }
         getEmployees()
     }, []);

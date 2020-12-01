@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Human Resources",
+  "name": "Human resources - express workshop 2020",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://kingarturs.github.io/human_resources/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

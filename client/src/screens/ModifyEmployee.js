@@ -21,7 +21,7 @@ export default function ModifyEmployee() {
 	useEffect(() => {
 		const getResults = async () => {
             await axios({
-                url: `http://localhost:5000/employees/${idParams}`, 
+                url: `https://humanresources.cleverapps.io/employees/${idParams}`, 
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -123,7 +123,7 @@ export default function ModifyEmployee() {
 								console.log("USER DATA: ", userData);
 
 								axios({
-									url: `http://localhost:5000/employees/${idParams}`, 
+									url: `https://humanresources.cleverapps.io/employees/${idParams}`, 
 									method: "PUT",
 									data: data,
 									headers: headers

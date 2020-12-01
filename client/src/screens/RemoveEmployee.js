@@ -10,7 +10,7 @@ export default function RemoveEmployee() {
 	useEffect(() => {
 		async function removeEmployee() {
 			await axios({
-				url: `http://localhost:5000/employees/${id}`, 
+				url: `https://humanresources.cleverapps.io/employees/${id}`, 
 				method: "DELETE",
 				headers: {
 					"Authorization": `Bearer ${localStorage.getItem("token")}`
